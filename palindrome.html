@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Palindrome Checker Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <body>
+    <h2 class="becky">
+      <em>Becky Mali</em> 
+    </h2>
+    <h1 class="title">Is it a Palindrome?</h1>
+    <div class="div1">
+      <p id ="desription">Enter in text to check for a palindrome:</p>
+      <input type="text" id="text-input" name="text">
+      <button id="check-btn" py-click="palindrome()">Check</button>
+      <p id="result"></p>
+    </div><br>
+    <div class="div2">
+      <span role="img" aria-label="light-bulb">&#128161;</span>
+      A <dfn>palindrome</dfn> is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+      </div>
+      <py-script>
+        import re
+        from pyscript import Element
+
+        def palindrome():
+            # get the user input
+            text = Element("text-input").element.value.lower()
+
+            # omit all special symbols and display the alphanumeric characters as an array
+            split_text = re.findall("[a-z0-9]", text)
+
+            # join the array
+            joint_text = ''.join(split_text)
+
+            # reverse the array
+            reversed_arr = split_text[::-1]
+            
+            # join the reversed array
+            reversed_text = ''.join(reversed_arr)
+           
+            # compare if the joint_text is same as the reversed_text
+            if joint_text == reversed_text:
+                result = f"{text} is a palindrome"
+            else:
+                result = f"{text} is not a palindrome"
+
+            Element("result").element.textContent = result
+
+
+      </py-script>
+  </body>
+</html>
