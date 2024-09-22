@@ -1,0 +1,64 @@
+body{
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+ .div1{
+  position: relative;
+  top: 20%;
+  margin: auto;
+  width: 30%;
+  height: 23%;
+  border: 3px solid #0a0a23;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 20px; 
+  font-size: 23px;
+  text-align: center;
+  box-shadow: 0 6px 6px #002ead;
+}
+.div2{
+  position: relative;
+  top: 20%;
+  margin: auto;
+  width: 28%;
+  height: 17%;
+  border: 3px solid #0a0a23;
+  background-color: #00471b;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 23px;
+  text-align: center;
+  padding: 10px;
+}
+.title{
+  text-align: center;
+  position: relative;
+  top: 20%;
+  font-size: 50px;
+}
+#check-btn{
+  background-color: #5a01a7;
+  border-radius: 15px;
+  color: #fff;
+  width: 90px;
+  padding: 10px;
+  cursor: pointer;
+}
+#text-input{
+  text-align: center;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-bottom: 2px solid #5a01a7;
+  height: 30px;
+  width: 250px;
+}
+#text-input:focus{
+  border-bottom: 3px solid #5a01a7;
+}
+.becky{
+  position: relative;
+  text-align: center;
+  top: 20%;
+  font-size: 35px;
+}
